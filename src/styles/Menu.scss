@@ -1,0 +1,28 @@
+// FONTS_GOOGLE
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed&display=swap');
+// FONTS_GOOGLE
+@import url('https://fonts.googleapis.com/css?family=Electrolize&display=swap');
+
+
+// $
+
+// 000000fd
+$background-Color: #000000fd;
+$background: #131313;
+// content_background_color
+$content_background: #eeeeee;
+// GOLD
+$color-gold:#E3B873;
+// WHITE
+$color-white: #FFFFFF;
+//color-black
+$color-black: #363636;
+//  HOVER 
+$hover-color:rgb(205, 133, 63);
+
+//  MIXIN a 
+@mixin a() {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: transparent;
+}
