@@ -10,6 +10,7 @@ export default function Repair() {
     return (
         <section className="repair">
             <Title title="Types Fo Repair" />
+
         </section>
     );
 }

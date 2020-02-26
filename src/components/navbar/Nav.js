@@ -26,7 +26,7 @@ const Nav = () => {
     };
     return (
         <div>
-            <Link to="/" className="main__title">
+            <Link to="/" aria-label="GO To Home" className="main__title">
                 <h3 style={title}>IC &#34;REPAIR DESIGN&#34;</h3>
             </Link>
             <FocusLock disabled={!open}>

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 
 
@@ -7,6 +6,8 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import { StyledMenu } from './Menu.Styled';
+
+import Icon from './Icon';
 
 //------------------------------------------
 
@@ -33,12 +34,8 @@ export default function Menu({ open }) {
                     <NavLink to="/Contacts" className="main__nav__item">Contacts</NavLink>
                 </ul>
             </div>
-            <div className="box__info">
-                <ul className="list__contact">
-                    <li>
-                        <Link className="icon__call" to="tel:+20(345)345-34-55" />
-                    </li>
-                </ul>
+            <div className="main__icon">
+                <Icon />
             </div>
             <div className="main__nav__img">
                 <figure className="main__nav__img__">
