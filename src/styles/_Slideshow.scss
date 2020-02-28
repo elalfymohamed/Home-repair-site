@@ -3,8 +3,8 @@
 .completed {
     padding-top: 47px;
     display: grid;
-    grid-template-columns: minmax(20px, 100px) minmax(400px, 490px) minmax(680px, auto);
-    grid-template-rows: 80px 100px 130px auto 120px;
+    grid-template-columns: minmax(20px,70px) minmax(400px, 470px) minmax(680px, auto);
+    grid-template-rows: 80px 100px 130px auto 100px;
 
     .completed__title {
         grid-column: 2;
@@ -24,7 +24,7 @@
         color: $color-white;
         font-size: 19px;
         line-height: 29px;
-        padding-right: 50px;
+        padding-right: 36px;
     }
 
 
@@ -33,7 +33,7 @@
         grid-column: 3;
         grid-row: 2/span 4;
         display: grid;
-        margin-left: 80px;
+        // margin-left: 80px;
 
         .slider {
             position: relative;
@@ -109,7 +109,7 @@
 
         ul {
             list-style: none;
-            margin-left: 35%;
+            // margin-left: 35%;
 
             li {
                 display: inline;

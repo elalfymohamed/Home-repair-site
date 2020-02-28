@@ -1,0 +1,49 @@
+
+.main__icon {
+    grid-column: 2;
+    grid-row: 3/3;
+
+    .list__contact {
+        display: flex;
+        align-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+
+
+        .list__icon {
+            .list__icon_btu {
+                align-content: center;
+                display: flex;
+                justify-content: center;
+                padding-top: 15px;
+
+                .list__icon__phoneCall {
+                    background-image: url('../img/icon/phone-call-service-support-customer.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 2rem;
+                    width: 3em;
+                }
+
+
+                .list__icon__Email {
+                    background-image: url('../img/icon/Email_security_.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 2rem;
+                    width: 3em;
+                }
+
+                .list__icon__GoogleMaps {
+                    background-image: url('../img/icon/Google_Maps__icons.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 2.8rem;
+                    width: 3em;
+                }
+            }
+        }
+    }
+}

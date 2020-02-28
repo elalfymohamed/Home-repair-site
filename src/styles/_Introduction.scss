@@ -2,9 +2,8 @@
 
 .introduction__ {
     display: grid;
-    grid-template-columns: 95px 165px minmax(auto, auto);
+    grid-template-columns: 70px 165px minmax(auto, auto);
     grid-template-rows: minmax(auto, 730px) 48px 85px;
-    // padding-top: 6rem;
 
     .introduction__inner {
         grid-column: 2/span 2;
@@ -25,8 +24,6 @@
             grid-column: 1 /span 4;
             grid-row: 1 /span 5;
             opacity: 0.4;
-
-
         }
 
         .introduction__title {
@@ -125,7 +122,7 @@
             img {
                 height: 55px;
                 margin-top: 50px;
-                width: 77px;
+                width: 70px;
             }
 
         }
@@ -138,7 +135,7 @@
         position: relative;
         top: 16%;
         background-color: $background-Color;
-        width: 200px;
+        width: 184px;
         height: 70px;
         padding: 10px;
         justify-content: center;

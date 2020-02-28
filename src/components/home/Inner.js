@@ -6,7 +6,7 @@ export default function Inner({
 }) {
     return (
         <>
-            <div className={img} />
+            <div className={img} role="img" />
             <h2 className={__title}>
                 {' '}
                 {title}

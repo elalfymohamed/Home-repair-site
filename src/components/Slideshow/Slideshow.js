@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import DefaultSlides from './DefaultSlides';
 
 import Slider from './Slider';
@@ -51,13 +53,13 @@ export default function Slideshow() {
             <div className="completed__box-links">
                 <ul>
                     <li>
-                        <a href="/">Rostov-on-Don, Admiral</a>
+                        <Link to="/">Rostov-on-Don, Admiral</Link>
                     </li>
                     <li>
-                        <a href="/">Sochi Thieves</a>
+                        <Link to="/">Sochi Thieves</Link>
                     </li>
                     <li>
-                        <a href="/">Rostov-on-Don Patriotic</a>
+                        <Link to="/">Rostov-on-Don Patriotic</Link>
                     </li>
                 </ul>
             </div>

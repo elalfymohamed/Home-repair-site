@@ -71,7 +71,7 @@ const Burger = ({ open, setOpen }) => {
         return () => {
             document.body.classList.remove(MODAL_OPEN);
         };
-    });
+    }, [condition]);
 
 
     return (
@@ -79,6 +79,8 @@ const Burger = ({ open, setOpen }) => {
             onClick={() => setCondition(!condition)}
             role="button"
             tabIndex="0"
+            aria-label="Toggle menu"
+
 
         >
             <StyledBurger

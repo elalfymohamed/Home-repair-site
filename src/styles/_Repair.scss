@@ -2,7 +2,7 @@
 
 .repair {
     display: grid;
-    grid-template-columns: 18px  auto auto auto 18px;
+    grid-template-columns: 18px auto auto auto 18px;
     grid-template-rows: 65px 57px auto auto;
     background: $content_background;
 
@@ -33,5 +33,42 @@
         display: block;
     }
 
+    .repair__rectangle {
+        grid-column: 2/2;
+        grid-row: 3;
 
+        .rectangle__img {
+            width: 340px;
+            height: 400px;
+            margin: 0;
+
+            .rectangle__img__one {
+                width: 340px;
+                height: 400px;
+            }
+        }
+
+        .rectangle__Redecorating {
+            background-color: $color-white;
+            width: 230px;
+            height: 200px;
+            position: relative;
+            bottom: 126px;
+            left: 21px;
+            display: list-item;
+            overflow: hidden;
+
+            .rectangle__title {}
+
+            .rectangle__ul {
+
+
+
+                .rectangle__li {}
+            }
+        }
+
+
+
+    }
 }

@@ -56,10 +56,10 @@ export default function Introduction() {
                         20% from
                         cost of materials due to the organization of work"
                     />
-                    <Link to="/" target="_blank" style={btnCalculate} rel="opener preferred" className="btn btn-calculate">
+                    <Link to="/" target="_blank" style={btnCalculate} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-calculate">
                         CALCULATE THE COST
                     </Link>
-                    <Link to="/" target="_blank" style={btnApplication} rel="opener preferred" className="btn btn-application">
+                    <Link to="/" target="_blank" style={btnApplication} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-application">
                         <span>SUBMIT YOUR</span>
                         {' '}
                     APPLICATION

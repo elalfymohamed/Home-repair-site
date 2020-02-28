@@ -2,6 +2,8 @@
 
 import styled from 'styled-components';
 
+//---------------------------------------------
+
 export const StyledMenu = styled.nav`
 display: grid;
 grid-template-columns: auto 580px;
@@ -43,17 +45,15 @@ color: #E3B873;
 .main__title{
 grid-column: 2;
 grid-row: 1;
-font-size: 25px;
-padding: 2px 0 0;
+padding: 15px 0 0;
+
+h3{
+margin: 0;
+color: #eeeeee;
+font-size: 27px;
 text-align: center;
 
 
-width: max-content;
-position: relative;
-top: 0;
-left: 50%;
-h3{
-margin: 0;
 }
 }
 
@@ -64,20 +64,20 @@ grid-row: 2/2;
 
 .main__nav__ul{
 text-align: center;
-position: absolute;
-/* top: 200px; */
-/* right: 285px; */
-top: 10%;
-right: 11%;
+-webkit-box-align:center;
+list-style:none;
 padding: 0;
+position: absolute;
+right: 12%;
 
 a{
-/* padding: 1.5rem 0; */
 padding: 1rem 0;
 font-size: 1.5rem;
+
 }
 }
 }
+
 
 .main__nav__img{
 height: 100%;
@@ -134,33 +134,6 @@ color: #E3B873;
 &:hover{
 color: #eeeeee;
 }
-}
-.main__icon{
-grid-column: 2;
-grid-row: 3/3;
-
-}
-
-.list__contact{
-display: flex;
-text-align: center;
-list-style: none;
-/* padding: 0; */
-/* margin: 0;    */
-justify-content: center;
-position: relative;
-bottom: 20px;
-}
-
-.list__icon{
-height: 2rem;
-width: 3em;
-
-}
-
-.list__media{
-height: 2rem;
-width: 3em;
 }
 
 `;

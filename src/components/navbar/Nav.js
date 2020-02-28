@@ -15,7 +15,7 @@ const Nav = () => {
     const title = {
         position: 'absolute',
         top: '3%',
-        left: '94px',
+        left: '70px',
         margin: '0',
         lineHeight: '16px',
         textTransform: 'uppercase',
