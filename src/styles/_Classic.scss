@@ -1,0 +1,130 @@
+@import './Menu';
+
+.classic__ {
+    display: grid;
+    grid-template-columns: 70px 400px auto 70px;
+    grid-template-rows: auto;
+
+    .classic__image {
+        grid-column: 1/ span 4;
+        grid-row: 1;
+        background: no-repeat url('../img/realize/realize-bg.jpg');
+        background-size: cover;
+        height: 790px;
+        width: 100%;
+        opacity: 0.2;
+    }
+
+    .menu__classic {
+        grid-column: 2;
+        grid-row: 1;
+
+        .menu__classic__ul {
+            display: block;
+            position: relative;
+            top: 80px;
+            left: 0;
+
+            .menu__title {
+                color: $color-gold;
+                font-size: 27px;
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: 37px;
+                font-family: 'Vidaloka', serif;
+            }
+
+            .menu__classic__div {
+                margin-top: 35px;
+
+                .menu__ul__title {
+                    margin-left: 8px;
+                    font-size: 16px;
+                    line-height: 34px;
+                    font-weight: 400;
+                    color: $color-gold;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        background: $color-gold;
+                        width: 120px;
+                        height: 1px;
+                    }
+                }
+
+                .menu__ul {
+                    list-style: none;
+                    color: $color-white;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 34px;
+                    padding-left: 10px;
+
+                    .menu__li{
+                        margin-bottom: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .classic__img {
+        grid-column: 3;
+        grid-row: 1;
+
+        .classic__img__top {
+            float: right;
+
+            .classic__img__right {
+                position: relative;
+                bottom: 70px;
+                left: 0;
+            }
+        }
+
+        .classic__img__right {
+            float: right;
+
+            .classic__img__bottom {
+                position: relative;
+                top: 270px;
+                left: 360px;
+
+                img {
+                    width: 355px;
+                    height: 460px;
+                }
+            }
+        }
+
+        .classic__img__left_ {
+            display: flex;
+
+            .classic__img__top_ {
+
+                position: relative;
+                bottom: 45px;
+
+                img {
+                    width: 374px;
+                    height: 495px;
+                }
+            }
+        }
+
+        .classic__img__left {
+
+            .classic__img__bottom_ {
+                position: absolute;
+
+                img {
+                    height: 345px;
+                    width: 372px;
+                }
+            }
+        }
+    }
+
+}

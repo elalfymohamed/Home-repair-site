@@ -8,6 +8,9 @@ import Introduction from '../introduction/Introduction';
 
 import Control from '../control/Control';
 
+import Classic from '../classic/Classic';
+
+import Goal from '../listGoal/Goal';
 
 import '../../styles/App.scss';
 
@@ -18,6 +21,8 @@ export default function Home() {
             <Nav />
             <Introduction />
             <Control />
+            <Classic />
+            <Goal />
         </>
     );
 }

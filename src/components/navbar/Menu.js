@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { StyledMenu } from './Menu.Styled';
 
@@ -21,8 +21,8 @@ import toledo from '../../img/menu/rogerio-toledo-REdjtVaNyh8-unsplash.jpg';
 export default function Menu({ open }) {
     return (
         <StyledMenu open={open}>
-            <div className="main__title" aria-label="GO To Home">
-                <h3>IC</h3>
+            <div className="main__icon-img" aria-label="GO To Home">
+                <div role="img" />
             </div>
             <div className="main__nav">
                 <ul className="main__nav__ul">

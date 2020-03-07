@@ -2,8 +2,8 @@
 
 .repair {
     display: grid;
-    grid-template-columns: 18px auto auto auto 18px;
-    grid-template-rows: 65px 57px auto auto;
+    grid-template-columns: 70px auto auto auto 70px;
+    grid-template-rows: 65px 70px auto auto;
     background: $content_background;
 
     .__title {
@@ -17,6 +17,7 @@
         text-transform: uppercase;
         text-align: center;
         z-index: 10;
+        @include font;
     }
 
     .__image {
@@ -27,6 +28,7 @@
         background-repeat: no-repeat;
         background-position: center;
         z-index: 10;
+        padding-bottom: 15px;
     }
 
     .__info {
@@ -36,39 +38,94 @@
     .repair__rectangle {
         grid-column: 2/2;
         grid-row: 3;
+        height: 44rem;
+    }
 
-        .rectangle__img {
-            width: 340px;
-            height: 400px;
-            margin: 0;
-
-            .rectangle__img__one {
-                width: 340px;
-                height: 400px;
-            }
-        }
-
-        .rectangle__Redecorating {
-            background-color: $color-white;
-            width: 230px;
-            height: 200px;
-            position: relative;
-            bottom: 126px;
-            left: 21px;
-            display: list-item;
-            overflow: hidden;
-
-            .rectangle__title {}
-
-            .rectangle__ul {
-
-
-
-                .rectangle__li {}
-            }
-        }
-
-
+    .repair__rectangle_ {
+        grid-column: 3/3;
+        grid-row: 3;
+        height: 44rem;
 
     }
+
+    .repair__rectangle__ {
+        grid-column: 4/4;
+        grid-row: 3;
+        height: 44rem;
+
+    }
+
+    .rectangle__img {
+        width: 360px;
+        height: 400px;
+        margin: 0;
+
+        .rectangle__img__one {
+            width: 390px;
+            height: 445px;
+        }
+    }
+
+    .rectangle__Redecorating {
+        background-color: $list;
+        width: 310px;
+        height: 320px;
+        position: relative;
+        bottom: 95px;
+        left: 25px;
+        display: list-item;
+        overflow: hidden;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.055);
+
+        &:hover {
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.384);
+        }
+
+        .rectangle__title {
+            font-size: 20px;
+            line-height: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: $color-black;
+            padding-left: 41px;
+            padding-top: 7px;
+        }
+
+        .rectangle__ul {
+            padding-left: 60px;
+
+            .rectangle__li {
+                font-size: 15px;
+                line-height: 25px;
+                padding: 2px;
+                color: $color-font;
+            }
+        }
+    }
+
+    .btu_rectangle {
+        background-color: $color-gold;
+        width: 210px;
+        height: 55px;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        text-align: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        position: relative;
+        bottom: 130px;
+        left: 10px;
+        padding: 16px;
+
+        .btu_link {
+            @include a();
+            color: $color-white;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &:hover {
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.384);
+        }
+    }
+
+
 }

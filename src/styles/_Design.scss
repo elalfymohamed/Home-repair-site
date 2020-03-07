@@ -1,0 +1,183 @@
+@import './Menu';
+
+.design__ {
+    display: grid;
+    grid-template-columns: 70px auto auto auto 70px;
+    grid-template-rows: 150px auto;
+    background-color: $content_background;
+    padding-top: 120px;
+    height: 600px;
+
+    .design__title {
+        grid-column: 2/span 3;
+        grid-row: 1;
+
+
+        .__title {
+            text-align: center;
+            font-size: 20px;
+            line-height: 28px;
+            text-transform: uppercase;
+            margin: 0;
+            @include font;
+        }
+
+        .__image {
+            background: url('../img/svg/signboard-design.svg') no-repeat;
+            background-position: center;
+            padding-top: 45px;
+        }
+
+        .__info {
+            width: 708px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            left: 240px;
+            font-size: 17px;
+            line-height: 27px;
+            margin-top: 0;
+        }
+    }
+
+    //----MINI-----------
+
+    .project__Mini {
+        grid-column: 2/2;
+        grid-row: 2;
+        height: $height-project;
+
+        .mini_image {
+
+            .project__img {
+                @include image;
+            }
+        }
+
+        .mini__list {
+            width: 330px;
+            height: 220px;
+            @include list;
+
+            &:hover {
+                box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
+            }
+
+            .mini__title {
+                @include title;
+            }
+
+            .mini__list__ul {
+                padding-left: 50px;
+
+                .mini__list__li {
+                    @include li;
+                }
+            }
+        }
+    }
+
+    .project__btn {
+        background-color: #e6b15d;
+        width: 210px;
+        height: 55px;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.199);
+        text-align: center;
+        position: relative;
+        bottom: 170px;
+        left: 30px;
+        padding: 16px;
+
+        &:hover {
+            box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.466);
+
+        }
+
+        .project__link {
+            @include a;
+            @include font;
+            color: $color-white;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+
+    // STANDARD -------------------
+
+    .project__Standard {
+        grid-column: 3/3;
+        grid-row: 2;
+        height: $height-project;
+
+        .standard__image {
+
+            .project__img {
+                @include image;
+            }
+        }
+
+        .standard__list {
+            width: 330px;
+            height: 305px;
+            @include list;
+
+            &:hover {
+                box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
+
+            }
+
+            .standard__title {
+                @include title;
+            }
+
+            .standard__list__ul {
+                padding-left: 50px;
+
+                .standard__list__li {
+                    @include li;
+                }
+
+            }
+        }
+    }
+
+    // FULL ------------
+
+    .project__Full {
+        grid-column: 4/4;
+        grid-row: 2;
+        height: $height-project;
+
+        .Full__image {
+
+            .project__img {
+                @include image;
+            }
+        }
+
+        .Full__list {
+            width: 330px;
+            height: 455px;
+            @include list;
+
+            &:hover {
+                box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
+
+            }
+
+            .Full__title {
+                @include title;
+            }
+
+            .Full__list__ul {
+                padding-left: 50px;
+
+                .Full__list__li {
+                    @include li;
+                }
+
+            }
+        }
+    }
+}

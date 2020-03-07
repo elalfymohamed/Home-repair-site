@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
-
 import styled from 'styled-components';
+
+import icon from '../../img/icon/ICON-DESIGN.svg';
 
 //---------------------------------------------
 
@@ -15,7 +16,7 @@ flex-direction: column;
 justify-content: center;
 background: #000000;
 transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-height:100%;
+height:101%;
 width: 100%;
 padding: 0;
 position: absolute;
@@ -42,16 +43,19 @@ color: #E3B873;
 }
 }
 
-.main__title{
+.main__icon-img{
 grid-column: 2;
 grid-row: 1;
-padding: 15px 0 0;
+padding: 6px 0 0;
 
-h3{
-margin: 0;
-color: #eeeeee;
-font-size: 27px;
-text-align: center;
+div{
+background:url(${icon});
+/* background-position: center; */
+background-repeat: no-repeat;
+height: 50px;
+position:inherit;
+left: 5px;
+
 
 
 }

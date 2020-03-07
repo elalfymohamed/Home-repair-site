@@ -1,0 +1,304 @@
+@import './Menu';
+
+.free__ {
+    display: grid;
+    grid-template-columns: 70px auto auto 70px;
+    grid-template-rows: auto minmax(117px, 60px);
+    background: $content_background;
+    height: 850px;
+
+    .free__old {
+        grid-column: 2;
+        grid-row: 1/span 2;
+
+        .free__img {
+            background: url('../img/home/presentation.png') no-repeat;
+            width: 44rem;
+            height: 100%;
+            margin: 0;
+
+            .free__img__title {
+                background: url('../img/svg/presentation_ellipse.svg') no-repeat;
+                width: 83%;
+                height: 100%;
+                position: relative;
+                left: 25px;
+                top: 50px;
+                margin: 0;
+
+                .title__ {
+                    display: flex;
+                    position: relative;
+                    left: 60%;
+                    width: 0;
+
+                    .free__title {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        font-size: 13px;
+
+                        .free__title__l {
+                            width: 0;
+
+                            .l__title {
+                                position: relative;
+                                left: 55px;
+                                top: 50px;
+                                width: 20rem;
+
+                                .l__p {
+                                    line-height: 19px;
+                                }
+                            }
+
+                            .l__title_ {
+                                position: relative;
+                                left: 128px;
+                                top: 122px;
+                                width: 6rem;
+                            }
+
+                            .l__title__ {
+                                position: relative;
+                                left: 153px;
+                                top: 254px;
+                                width: 7rem;
+                            }
+
+                            .l__title___ {
+                                position: relative;
+                                left: 93px;
+                                top: 380px;
+                                width: 12rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .form__ {
+        grid-column: 3;
+        grid-row: 1/2;
+
+        .form__col {
+            background: $background-Color;
+            width: 460px;
+            height: 485px;
+            position: relative;
+            left: 30px;
+            top: 90px;
+            border-radius: 1%;
+
+            .title__form {
+                text-align: center;
+                color: $color-white;
+                padding: 15px;
+                margin: 0 85px 0 85px;
+                font-size: 17px;
+                line-height: 25px;
+            }
+
+            .form__form {
+                margin: 10px;
+                position: absolute;
+                top: 90px;
+                left: 55px;
+                width: 350px;
+
+
+                .from__group {
+                    position: relative;
+                    margin-bottom: 35px;
+
+                    .error {
+                        color: red;
+                        font-size: 12px;
+                        margin: 3px;
+                    }
+
+                    .inputError {
+                        border-color: red;
+                    }
+
+                    input {
+                        font-size: 18px;
+                        padding: 10px 10px 10px 5px;
+                        display: block;
+                        width: 300px;
+                        border: none;
+                        border-bottom: 1px solid #757575;
+                        background-color: $background-Color;
+                        color: $color-white;
+
+                        &:focus {
+                            outline: none;
+                            border-bottom: none !important;
+
+                        }
+
+                        &:focus~.form__label,
+                        &:valid~.form__label {
+                            top: -14px;
+                            font-size: 16px;
+                            color: $color-gold;
+                        }
+
+                        &:focus~.bar:before {
+                            width: 100%;
+                        }
+                    }
+
+                    .form__label {
+                        color: #999999;
+                        font-size: 18px;
+                        font-weight: normal;
+                        position: absolute;
+                        pointer-events: none;
+                        left: 5px;
+                        top: 10px;
+                        transition: 0.2s ease all;
+                    }
+
+                    .bar {
+                        position: relative;
+                        display: block;
+                        width: 300px;
+
+                        &::before,
+
+                        &:active {
+                            content: '';
+                            height: 2px;
+                            width: 0;
+                            bottom: 1px;
+                            position: absolute;
+                            background: $color-gold;
+                            transition: 0.2s ease all;
+                        }
+                    }
+
+                    .bar {
+                        &::before {
+                            content: '';
+                            left: 0;
+                        }
+
+                        &::after {
+                            content: '';
+                            right: 50%;
+                        }
+                    }
+
+                    .highlight {
+                        position: absolute;
+                        height: 60%;
+                        width: 100px;
+                        top: 25%;
+                        left: 0;
+                        pointer-events: none;
+                        opacity: 0.5;
+                    }
+
+                    input {
+                        &:focus {
+                            ~ {
+                                .highlight {
+                                    animation: inputHighlighter 0.3s ease;
+                                }
+                            }
+                        }
+                    }
+
+                    @keyframes inputHighlighter {
+                        from {
+                            background: $color-gold;
+                        }
+
+                        to {
+                            width: 0;
+                            background: transparent;
+                        }
+                    }
+
+                }
+
+                .checkbox {
+                    display: flex;
+                    margin-bottom: 10px;
+                    margin-top: 2px;
+
+                    .form__checkbox__label {
+                        display: block;
+                        position: relative;
+                        top: 4px;
+                        left: 5px;
+                        font-size: 14px;
+                        margin-bottom: 12px;
+                        user-select: none;
+                        color: $color-white;
+                    }
+
+                    .form__checkbox {
+                        cursor: pointer;
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+
+                .form__btu {
+                    position: absolute;
+                    left: 175px;
+                    top: 320px;
+                    pointer-events: auto;
+
+                    .btu {
+                        background-color: $color-gold;
+                        color: $color-white;
+                        border: none;
+                        width: 190px;
+                        height: 46px;
+                        font-size: 13px;
+                        text-align: center;
+
+
+                        &:hover {
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .save {
+        grid-column: 3;
+        grid-row: 2/2;
+
+        .save__p {
+            display: flex;
+            position: relative;
+            left: 30px;
+            bottom: 140px;
+
+            .img {
+                background: no-repeat url('../img/svg/presentation-pig.svg');
+                width: 100px;
+                height: 84px;
+
+            }
+
+            .p__style {
+                color: $color-gold;
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: bold;
+                padding-top: 5px;
+                padding-left: 5px;
+            }
+        }
+    }
+}
