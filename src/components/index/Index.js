@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from '../home/Home';
 
-import Projects from '../projects/Projects';
+
+import NotFound from '../404/NotFound';
 
 
 export default function Index() {
@@ -15,7 +16,7 @@ export default function Index() {
             <>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/projects" component={Projects} />
+                    <Route path="*" component={NotFound} status={404} />
                 </Switch>
             </>
         </Router>

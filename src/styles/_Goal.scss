@@ -1,0 +1,179 @@
+@import './Menu';
+
+
+.goal {
+    display: grid;
+    grid-template-columns: 70px 350px auto 70px;
+    grid-template-rows: 155px auto;
+    padding-top: 500px;
+
+
+    .goal__info {
+        grid-column: 2/2;
+        grid-row: 1/1;
+
+        .Goal__Title {
+            color: $color-white;
+            font-size: 16px;
+            line-height: 21px;
+            text-transform: uppercase;
+        }
+
+        .goal__div {
+            position: relative;
+
+            .goal__h4 {
+                font-size: 27px;
+                line-height: 37px;
+                text-transform: uppercase;
+                color: $color-gold;
+                @include font;
+            }
+
+            .goal__after {
+                position: relative;
+                bottom: 65px;
+                left: 190px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 0.5em;
+                    width: 25%;
+                    border-top: 1px solid $color-gold;
+                }
+            }
+        }
+    }
+
+    .slider__room__info {
+        grid-column: 3/3;
+        grid-row: 1/1;
+
+
+        .slider__room {
+            display: flex;
+
+
+            .room-info {
+                margin-left: 12px;
+                opacity: 0.2;
+                transition: 3s ease;
+
+
+                .slider__number {
+                    color: $color-gold;
+                    font-size: 15px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    @include font;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        height: 0.5em;
+                        width: 15%;
+                        border-top: 1px solid $color-gold;
+                    }
+                }
+
+                .slider__title {
+                    width: 130px;
+
+                    .Slider__Title {
+                        color: $color-white;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+            }
+
+            .room-info.active {
+                opacity: 1;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+
+    .slider__image__show {
+        grid-column: 3/3;
+        grid-row: 2/2;
+
+
+        .image {
+            opacity: 0;
+            transition: .3s ease;
+
+            .slider__img {
+
+                .img {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 460px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .image.active {
+            opacity: 1;
+            transition-duration: .2s;
+        }
+    }
+
+    .slider__info__room {
+        grid-column: 2/2;
+        grid-row: 2/2;
+
+        .slider__info {
+            margin-right: 60px;
+
+            .info {
+                opacity: 0;
+                transition: 3s ease;
+
+
+                .slider__info_ {
+                    padding-top: 30px;
+
+                    .Number__info {
+                        font-size: 18px;
+                        line-height: 25px;
+                        text-transform: uppercase;
+                        color: $color-white;
+                        @include font;
+                    }
+                }
+
+                .title__info {
+                    padding-top: 1px;
+
+                    .title {
+                        font-size: 16px;
+                        line-height: 23px;
+                        text-transform: uppercase;
+                        color: $color-gold;
+                        @include font;
+                    }
+                }
+
+                .info__p {
+                    padding-top: 1px;
+
+                    .f__p {
+                        font-size: 17px;
+                        line-height: 25px;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            .info.active {
+                opacity: 1;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+}

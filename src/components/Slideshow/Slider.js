@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 
+import PropTypes from 'prop-types';
 
 const Slider = ({ slides }) => {
     const [curr, setCurr] = useState(0);
@@ -12,9 +13,11 @@ const Slider = ({ slides }) => {
     };
 
     useEffect(() => {
-        setTimeout(goToNext, 2000);
-    });
-
+        setTimeout(goToNext, 3000);
+        return () => {
+            clearTimeout(goToNext);
+        };
+    }, [goToNext]);
 
     if (!Array.isArray(slides) || length <= 0) {
         return null;
@@ -31,6 +34,14 @@ const Slider = ({ slides }) => {
             ))}
         </div>
     );
+};
+
+Slider.defaultProps = {
+    slides: [],
+};
+
+Slider.propTypes = {
+    slides: PropTypes.arrayOf(PropTypes.object),
 };
 
 
