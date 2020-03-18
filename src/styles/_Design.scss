@@ -1,19 +1,19 @@
 @import './Menu';
 
-.design__ {
+.design{
     display: grid;
     grid-template-columns: 70px auto auto auto 70px;
-    grid-template-rows: 150px auto;
+    grid-template-rows: 185px auto;
     background-color: $content_background;
     padding-top: 120px;
     height: 600px;
 
-    .design__title {
+    .design__Title {
         grid-column: 2/span 3;
         grid-row: 1;
 
 
-        .__title {
+        .design__title {
             text-align: center;
             font-size: 20px;
             line-height: 28px;
@@ -22,21 +22,19 @@
             @include font;
         }
 
-        .__image {
+        .design__image {
             background: url('../img/svg/signboard-design.svg') no-repeat;
             background-position: center;
-            padding-top: 45px;
+            height: 35px;
+            margin-top: 5px;
         }
 
-        .__info {
-            width: 708px;
+        .design__info {
             overflow: hidden;
             text-align: center;
-            position: relative;
-            left: 240px;
             font-size: 17px;
             line-height: 27px;
-            margin-top: 0;
+            font-family: $font_info;
         }
     }
 

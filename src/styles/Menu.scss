@@ -26,13 +26,16 @@ $color-black: #363636;
 $hover-color:rgb(205, 133, 63);
 //LIST
 $list:#FFFFFF;
+// font__info
+$font_info:FuturaBookC;
+
 
 
 //  MIXIN a 
+
 @mixin a() {
     text-decoration: none;
     text-transform: uppercase;
-    color: transparent;
 }
 
 // MIXIN font
@@ -77,3 +80,34 @@ $height-project: 815px;
 
 
 //-- END ----------
+
+// --- our clients ------
+
+@mixin iconClients {
+    height: 35px;
+    margin: 2px;
+    position: relative;
+    top: 8px;
+    left: 4px;
+}
+
+@mixin boxClients {
+    background-color: $color-gold;
+    margin: 2px;
+    width: 133px;
+    height: 50px;
+    display: flex;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+}
+
+@mixin fontClients {
+    @include font;
+    font-size: 17px;
+    line-height: 24px;
+    color: $color-white;
+    position: relative;
+    left: 38px;
+    bottom: 20px;
+}
+
+// END ---------

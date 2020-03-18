@@ -1,12 +1,37 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function Title({ title, info }) {
+import PropTypes from 'prop-types';
+
+
+export default function Title({
+    title, info, classis, br,
+}) {
     return (
         <>
-            <h1 className="__title">{title}</h1>
-            <div className="__image" role="img" />
-            <p className="__info">{info}</p>
+            <div className={`${classis}__Title`}>
+                <h1 className={`${classis}__title`}>{title}</h1>
+                <div className={`${classis}__image`} role="img" />
+                <p className={`${classis}__info`}>
+                    {info}
+                    <br />
+                    {br}
+                </p>
+            </div>
         </>
     );
 }
+
+Title.defaultProps = {
+    title: '',
+    info: '',
+    classis: '',
+    br: '',
+};
+
+Title.propTypes = {
+    title: PropTypes.string,
+    info: PropTypes.string,
+    classis: PropTypes.string,
+    br: PropTypes.string,
+
+};

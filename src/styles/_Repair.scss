@@ -3,36 +3,38 @@
 .repair {
     display: grid;
     grid-template-columns: 70px auto auto auto 70px;
-    grid-template-rows: 65px 70px auto auto;
+    grid-template-rows: 190px  auto auto;
     background: $content_background;
+    padding-top: 45px;
 
-    .__title {
-        grid-column: 3;
-        grid-row: 1;
-        font-size: 25px;
-        line-height: 28px;
-        color: $color-black;
-        padding-top: 20px;
-        letter-spacing: .2px;
-        text-transform: uppercase;
-        text-align: center;
-        z-index: 10;
-        @include font;
-    }
+    .repair__Title {
+        grid-column: 2/ span 3;
+        grid-row: 1/1;
 
-    .__image {
-        grid-column: 3;
-        grid-row: 2;
-        text-align: center;
-        background-image: url("../img/svg/signboard-repair.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: 10;
-        padding-bottom: 15px;
-    }
+        .repair__title {
+            font-size: 25px;
+            line-height: 28px;
+            color: $color-black;
+            padding-top: 20px;
+            letter-spacing: .2px;
+            text-transform: uppercase;
+            text-align: center;
+            z-index: 10;
+            @include font;
+        }
 
-    .__info {
-        display: block;
+        .repair__image {
+            background-image: url("../img/svg/signboard-repair.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 35px;
+            z-index: 10;
+            padding-bottom: 15px;
+        }
+
+        .repair__info {
+            display: none;
+        }
     }
 
     .repair__rectangle {

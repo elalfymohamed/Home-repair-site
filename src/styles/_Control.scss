@@ -5,29 +5,31 @@
     grid-template-columns: 18px auto 18px;
     grid-template-rows: 132px 60px auto auto 92px;
 
-    .__title {
-        grid-column: 2;
+    .control__Title {
+        grid-column: 1/span 2;
         grid-row: 1;
-        font-size: 25px;
-        line-height: 28px;
-        color: $color-white;
         padding-top: 85px;
-        letter-spacing: .2px;
-        text-transform: uppercase;
-        text-align: center;
-    }
 
-    .__image {
-        grid-column: 2;
-        grid-row: 2;
-        text-align: center;
-        padding-top: 20px;
-        background-image: url("../img/svg/signboard-control.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .__info{
-        display: block;
+        .control__title {
+            font-size: 25px;
+            line-height: 28px;
+            color: $color-white;
+            letter-spacing: .2px;
+            text-transform: uppercase;
+            text-align: center;
+            @include font;
+        }
+
+        .control__image {
+            background-image: url("../img/svg/signboard-control.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 35px;
+        }
+
+        .control__info {
+            display: none;
+        }
     }
 
     .content__video {
@@ -60,12 +62,14 @@
         padding: 0;
     }
 
-    .content__img__line {
+    .content__icon__line {
         grid-column: 2;
         grid-row: 5;
-        margin: 0 auto;
         margin-top: 60px;
         z-index: 10;
+        background: no-repeat url('../img/svg/line.svg');
+        background-position: center;
+        height: 2px;
     }
 
     .content__description {
@@ -73,18 +77,19 @@
         grid-row: 6;
         text-align: center;
         font-size: 20px;
+        font-family: $font_info;
         line-height: 34px;
         color: $color-black;
-        max-width: 678px;
         margin: 0 auto;
         z-index: 10;
     }
 
-    .content__substrate {
+    .substrate {
         grid-column: 1/ span 3;
         grid-row: 4/ span 3;
         position: relative;
         top: 123px;
         background: $content_background;
+        z-index: -10;
     }
 }

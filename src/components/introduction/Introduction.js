@@ -42,7 +42,7 @@ export default function Introduction() {
 
     return (
         <>
-            <section className="introduction__">
+            <section className="introduction">
                 <div className="introduction__inner">
                     <Inner
                         img="introduction__img"

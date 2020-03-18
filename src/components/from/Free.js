@@ -6,7 +6,7 @@ import '../../styles/_Form.scss';
 
 export default function Free() {
     return (
-        <section className="free__">
+        <section className="free">
             <div className="free__old">
                 <div className="free__img">
                     <div className="free__img__title">

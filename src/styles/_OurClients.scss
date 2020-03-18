@@ -1,0 +1,149 @@
+@import './Menu';
+
+.OurClients {
+    display: grid;
+    grid-template-columns: 70px auto auto auto 70px;
+    grid-template-rows: 240px auto;
+    padding-top: 80px;
+    background-color: $content_background;
+
+    .OurClients__Title {
+        grid-column: 2/span 3;
+        grid-row: 1/1;
+
+        .OurClients__title {
+            text-align: center;
+            font-size: 20px;
+            line-height: 28px;
+            text-transform: uppercase;
+            @include font;
+        }
+
+        .OurClients__image {
+            background: no-repeat url('../img/svg/signboard-clients.svg');
+            background-position: center;
+            height: 35px;
+        }
+
+        .OurClients__info {
+            text-align: center;
+            font-size: 20px;
+            font-family: $font_info;
+            line-height: 27px;
+        }
+    }
+
+    .clients {
+        grid-column: 2/2;
+        grid-row: 2/2;
+    }
+
+    div:nth-child(2) {
+        grid-column: 4/4;
+        grid-row: 2/2;
+    }
+
+    div:nth-child(3) {
+        grid-column: 3/3;
+        grid-row: 2/2;
+    }
+
+
+
+    .show__clients {
+        margin-left: 18px;
+        background: $content_background;
+        border-radius: 1%;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+        padding: 10px;
+        // width: 300px;
+        height: 450px;
+
+        .img__clients {
+            padding: 5px;
+
+            .image {
+                height: 70px;
+                border-radius: 10%;
+            }
+        }
+
+        .info__clients {
+            display: flex;
+            padding-left: 2px;
+            height: 80px;
+
+            .names__clients {
+                width: 171px;
+                padding-left: 10px;
+
+                .name {
+                    @include font;
+                    font-size: 18px;
+                    line-height: 23px;
+                    font-weight: bold;
+
+                }
+            }
+        }
+
+        .detailing__clients {
+            width: 95%;
+
+            .detailing {
+                font-size: 12px;
+                font-family: $font_info;
+                line-height: 27px;
+                color: $color-font;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.226);
+        }
+    }
+
+    .detailed__project {
+        display: flex;
+        position: relative;
+        bottom: 30px;
+        left: 17px;
+
+        .box__distance {
+            @include boxClients;
+            width: 110px;
+
+            .icon__distance {
+                background: no-repeat url('../img/svg/client-svg-1.svg');
+                @include iconClients;
+
+                .distance {
+                    @include fontClients;
+                }
+            }
+            &:hover {
+                box-shadow: 5px 5px 20px rgba(56, 45, 26, 0.644);
+            }
+        }
+
+        .box__days {
+            @include boxClients;
+
+
+            .icon__days {
+                background: no-repeat url('../img/svg/client-svg-2.svg');
+                @include iconClients;
+
+                .days {
+                    @include fontClients;
+
+                }
+            }
+            &:hover {
+                box-shadow: 5px 5px 20px rgba(56, 45, 26, 0.644);
+            }
+        }
+
+        
+    }
+}

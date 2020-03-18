@@ -9,7 +9,7 @@ import '../../styles/_Classic.scss';
 export default function Classic() {
     return (
         <>
-            <section className="classic__">
+            <section className="classic">
                 <div className="classic__image" />
                 <div className="menu__classic">
                     <div className="menu__classic__ul">
