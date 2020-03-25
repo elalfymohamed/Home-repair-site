@@ -9,6 +9,8 @@ import Inner from '../home/Inner';
 
 import Slideshow from '../Slideshow/Slideshow';
 
+import Button from './Button';
+
 // import _Introduction.scss stylesheet
 import '../../styles/_Introduction.scss';
 
@@ -20,16 +22,6 @@ import down from '../../img/svg/btn-down.svg';
 
 
 export default function Introduction() {
-    // box-scroll-down
-    // const btn = () => {
-    //     window.scrollTo({
-    //         top: 500,
-    //         left: 500,
-    //         behavior: 'smooth',
-    //     });
-    // };
-
-    // stylesheet
     const btnCalculate = {
         background: '#E3B873e8',
         borderRadius: '3px',
@@ -72,11 +64,12 @@ export default function Introduction() {
                     </span>
                 </div>
                 <div className="introduction__box-scroll-down">
-                    <button type="button" onClick={() => scroll.scrollMore(900, { delay: 100 })}>
+                    <button type="button" onClick={() => scroll.scrollMore(900, { delay: 0 })}>
                         <p>Scroll down</p>
                         <img src={down} alt="btn-down" />
                     </button>
                 </div>
+                <Button />
             </section>
             <Slideshow />
         </>

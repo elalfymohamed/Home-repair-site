@@ -1,0 +1,275 @@
+@import './Menu';
+
+.Detail {
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 250px 280px 150px auto 70px;
+
+    .detail__ {
+        grid-column: 1/ span 3;
+        grid-row: 1;
+        padding-top: 50px;
+        background-color: $content_background;
+    }
+
+    .detail__svg {
+        grid-column: 1/span 3;
+        grid-row: 1;
+
+        .svg {
+            background: url('../img/svg/Frame.svg');
+            background-position: center;
+            position: relative;
+            bottom: 40px;
+            height: 289px;
+            width: 100%;
+            z-index: 0;
+            padding: 0;
+        }
+
+    }
+
+    .detail__home {
+        grid-column: 1 /span 3;
+        grid-row: 2 /span 4;
+
+        .detail__image {
+            background-image: url('../img/home/substrate_image.jpg');
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 0.2;
+            z-index: -10;
+
+        }
+    }
+
+    .form__section {
+        grid-column: 2/2;
+        grid-row: 1/ span 2;
+
+        .container {
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            top: 40px;
+            left: 170px;
+            width: 800px;
+
+            .box {
+                background-color: $background;
+                overflow: hidden;
+                height: 450px;
+                width: 100%;
+                z-index: 15;
+                opacity: 1;
+                border-radius: 2%;
+
+
+                .title__box {
+                    @include font;
+                    color: $color-white;
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                }
+
+                .form {
+
+                    .fix {
+                        margin-top: 45px;
+                        margin-bottom: 50px !important;
+
+                    }
+
+                    .from__group {
+                        position: relative;
+                        top: 0;
+                        margin-bottom: 35px;
+                        margin-left: 20px;
+                        display: inline-block;
+
+                        .error {
+                            color: red;
+                            font-size: 13px;
+                            margin: 4px;
+                        }
+
+                        .inputError {
+                            border-color: red;
+                        }
+
+                        .input {
+                            width: 500px;
+                        }
+
+                        input {
+                            font-size: 18px;
+                            padding: 10px 10px 10px 5px;
+                            display: block;
+                            width: 300px;
+                            border: none;
+                            border-bottom: 1px solid #757575;
+                            background-color: $background;
+                            color: $color-white;
+
+                            &:focus {
+                                outline: none;
+                                border-bottom: none !important;
+
+                            }
+
+                            &:focus~.form__label,
+                            &:valid~.form__label {
+                                top: -17px;
+                                font-size: 16px;
+                                color: $color-gold;
+                            }
+
+                            &:focus~.bar:before {
+                                width: 100%;
+                            }
+
+                        }
+
+                        input:-internal-autofill-selected {
+                            background-color: $background !important;
+                            z-index: 10;
+                        }
+
+                        .form__label {
+                            color: #999999;
+                            font-size: 18px;
+                            font-weight: normal;
+                            position: absolute;
+                            pointer-events: none;
+                            left: 5px;
+                            top: 10px;
+                            transition: 0.2s ease all;
+                        }
+
+                        .bar {
+                            position: relative;
+                            display: block;
+                            width: 300px;
+
+                            &::before,
+
+                            &:active {
+                                content: '';
+                                height: 2px;
+                                width: 0;
+                                bottom: 1px;
+                                position: absolute;
+                                background: $color-gold;
+                                transition: 0.2s ease all;
+                            }
+                        }
+
+                        .input {
+                            width: 500px;
+                        }
+
+                        .bar {
+                            &::before {
+                                content: '';
+                                left: 0;
+                            }
+
+                            &::after {
+                                content: '';
+                                right: 50%;
+                            }
+                        }
+
+                        .highlight {
+                            position: absolute;
+                            height: 60%;
+                            width: 100px;
+                            top: 25%;
+                            left: 0;
+                            pointer-events: none;
+                            opacity: 0.5;
+                        }
+
+                        input {
+                            &:focus {
+                                ~ {
+                                    .highlight {
+                                        animation: inputHighlighter 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+
+                        @keyframes inputHighlighter {
+                            from {
+                                background: $color-gold;
+                            }
+
+                            to {
+                                width: 0;
+                                background: transparent;
+                            }
+                        }
+                    }
+
+                    .checkbox {
+                        display: flex;
+                        margin-bottom: 10px;
+                        margin-top: 2px;
+                        justify-content: center;
+
+                        .form__checkbox__label {
+                            display: block;
+                            position: relative;
+                            top: 4px;
+                            left: 5px;
+                            font-size: 14px;
+                            margin-bottom: 12px;
+                            user-select: none;
+                        }
+
+                        p {
+                            color: $color-white;
+                            user-select: none;
+                            position: relative;
+                            bottom: 10px;
+                            left: 5px;
+                        }
+
+                        .form__checkbox {
+                            cursor: pointer;
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+
+                    .form__btu {
+                        justify-content: center;
+                        pointer-events: auto;
+
+                        .btu {
+                            background-color: $color-gold;
+                            color: $color-white;
+                            border: none;
+                            width: 140px;
+                            height: 46px;
+                            font-size: 20px;
+                            text-align: center;
+
+
+                            &:hover {
+                                background-color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

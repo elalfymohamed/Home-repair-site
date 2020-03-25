@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
-
-
 import React from 'react';
+
+import PropTypes from 'prop-types';
 
 import { NavLink } from 'react-router-dom';
 
@@ -46,9 +45,7 @@ export default function Menu({ open }) {
                     </li>
                 </ul>
             </div>
-            <div className="main__icon">
-                <Icon />
-            </div>
+            <Icon />
             <div className="main__nav__img">
                 <figure className="main__nav__img__">
                     <img src={kelsey} alt="toledo" />
@@ -60,3 +57,8 @@ export default function Menu({ open }) {
         </StyledMenu>
     );
 }
+
+
+Menu.propTypes = {
+    open: PropTypes.bool.isRequired,
+};

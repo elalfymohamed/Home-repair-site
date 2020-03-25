@@ -53,8 +53,8 @@
         }
 
         .mini__list {
-            width: 330px;
-            height: 220px;
+            width: 80%;
+            height: 27%;
             @include list;
 
             &:hover {
@@ -116,8 +116,8 @@
         }
 
         .standard__list {
-            width: 330px;
-            height: 305px;
+            width: 80%;
+            height: 38%;
             @include list;
 
             &:hover {
@@ -155,8 +155,8 @@
         }
 
         .Full__list {
-            width: 330px;
-            height: 455px;
+            width: 80%;
+            height: 55%;
             @include list;
 
             &:hover {

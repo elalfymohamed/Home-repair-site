@@ -80,7 +80,7 @@
     }
 
 
-    .form__ {
+    .container {
         grid-column: 3;
         grid-row: 1/2;
 
@@ -102,7 +102,7 @@
                 line-height: 25px;
             }
 
-            .form__form {
+            .box {
                 margin: 10px;
                 position: absolute;
                 top: 90px;
@@ -142,7 +142,7 @@
 
                         &:focus~.form__label,
                         &:valid~.form__label {
-                            top: -14px;
+                            top: -19px;
                             font-size: 16px;
                             color: $color-gold;
                         }
@@ -150,6 +150,12 @@
                         &:focus~.bar:before {
                             width: 100%;
                         }
+
+                    }
+
+                    input:-internal-autofill-selected {
+                        background-color: $background-Color !important;
+                        z-index: 10;
                     }
 
                     .form__label {
@@ -239,7 +245,14 @@
                         font-size: 14px;
                         margin-bottom: 12px;
                         user-select: none;
+                    }
+
+                    p {
                         color: $color-white;
+                        user-select: none;
+                        position: relative;
+                        bottom: 10px;
+                        left: 5px;
                     }
 
                     .form__checkbox {

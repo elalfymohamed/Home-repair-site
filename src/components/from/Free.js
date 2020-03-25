@@ -1,6 +1,6 @@
 import React from 'react';
 
-import From from './Form';
+import DetailForm from './DetailForm';
 
 import '../../styles/_Form.scss';
 
@@ -16,7 +16,7 @@ export default function Free() {
                                     <div className="l__title">
                                         <p className="l__p">
                                             Our specialist will arrive for measurements per day
-            contact, or appoint a date convenient for you
+                                            contact, or appoint a date convenient for you
                                         </p>
                                     </div>
                                 </li>
@@ -38,7 +38,7 @@ export default function Free() {
                                     <div className="l__title___">
                                         <p className="l__p">
                                             Get a cost estimate and
-            the timing of your future repairs
+                                            the timing of your future repairs
                                         </p>
                                     </div>
                                 </li>
@@ -47,7 +47,7 @@ export default function Free() {
                     </div>
                 </div>
             </div>
-            <From />
+            <DetailForm />
         </section>
     );
 }

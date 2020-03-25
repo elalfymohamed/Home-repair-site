@@ -1,59 +1,41 @@
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
 import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import '../../styles/_Icon.scss';
-
+import {
+    NavIcon, ListContact, ListIcon, Call, Email, GoogleMaps, ListIconLi,
+} from './Icon.Styled';
 
 export default function Icon() {
     return (
         <>
-            <div className="Nav__icon">
-                <ul className="list__contact">
-                    <li className="list__icon">
-                        <Link className="list__icon_btu" to="/" tabIndex="0" target="_blank" rel="noopener noreferrer" title="phoneCall">
-                            <span className="list__icon__phoneCall" role="img" aria-label="phoneCall" />
-                        </Link>
-                    </li>
-                    <li className="list__icon">
-                        <Link className="list__icon_btu" to="mailto:elalfy@gmail.com" tabIndex="0" target="_blank" rel="noopener noreferrer" title="Email">
-                            <span className="list__icon__Email" role="img" aria-label="Email" />
-                        </Link>
-                    </li>
-                    <li className="list__icon">
-                        <Link className="list__icon_btu" to="/" tabIndex="0" target="_blank" rel="noopener noreferrer" title="GoogleMaps">
-                            <span className="list__icon__GoogleMaps" role="img" aria-label="GoogleMaps" />
-                        </Link>
-                    </li>
-                </ul>
-
-            </div>
-            {/* <div className="Nav__icon__media">
-                <ul className="list__contact">
-                    <li className="list__media">
-                        <Link to="/" tabIndex="0" type="button" role="button" target="_blank" rel="noopener noreferrer">
-                            <img className="media__" src={Facebook} alt="Facebook" />
-                        </Link>
-                    </li>
-                    <li className="list__media">
-                        <Link to="/" tabIndex="0" type="button" role="button" target="_blank" rel="noopener noreferrer">
-                            <img className="media__" src={Instagram} alt="Instagram" />
-                        </Link>
-                    </li>
-                    <li className="list__media">
-                        <Link to="/" tabIndex="0" type="button" role="button" target="_blank" rel="noopener noreferrer">
-                            <img className="media__" src={Pinterest} alt="Pinterest" />
-                        </Link>
-                    </li>
-                    <li className="list__media">
-                        <Link to="/" tabIndex="0" type="button" role="button" target="_blank" rel="noopener noreferrer">
-                            <img className="media__" src={YouTube} alt="YouTube" />
-                        </Link>
-                    </li>
-                </ul>
-            </div> */}
+            <NavIcon>
+                <div className="Nav__icon">
+                    <ListContact className="list__contact">
+                        <ListIconLi className="list__icon">
+                            <Link className="list__icon_btu" style={{ outline: 'none' }} to="/" tabIndex="0" target="_blank" rel="noopener noreferrer" title="phoneCall">
+                                <ListIcon className="phoneCall" aria-label="phoneCall">
+                                    <Call />
+                                </ListIcon>
+                            </Link>
+                        </ListIconLi>
+                        <ListIconLi className="list__icon">
+                            <Link className="list__icon_btu" style={{ outline: 'none' }} to="mailto:elalfy@gmail.com" tabIndex="0" target="_blank" rel="noopener noreferrer" title="Email">
+                                <ListIcon className="Email" aria-label="Email">
+                                    <Email />
+                                </ListIcon>
+                            </Link>
+                        </ListIconLi>
+                        <ListIconLi className="list__icon">
+                            <Link className="list__icon_btu" style={{ outline: 'none' }} to="/" tabIndex="0" target="_blank" rel="noopener noreferrer" title="GoogleMaps">
+                                <ListIcon className="GoogleMaps" aria-label="GoogleMaps">
+                                    <GoogleMaps />
+                                </ListIcon>
+                            </Link>
+                        </ListIconLi>
+                    </ListContact>
+                </div>
+            </NavIcon>
         </>
     );
 }

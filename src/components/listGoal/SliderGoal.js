@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from 'react';
 
@@ -9,16 +8,16 @@ export default function SliderGoal({ room, image, info }) {
     const [curr, setCurr] = useState(0);
     const { length } = (room, image, info);
 
-    const ToGoNext = () => {
+    const GoNext = () => {
         setCurr(curr === length - 1 ? 0 : curr + 1);
     };
 
     useEffect(() => {
-        setTimeout(ToGoNext, 6000);
+        setTimeout(GoNext, 6000);
         return () => {
-            clearTimeout(ToGoNext);
+            clearTimeout(GoNext);
         };
-    }, [ToGoNext]);
+    }, [GoNext]);
 
     if (!Array.isArray(room, image, info) || length <= 0) {
         return null;

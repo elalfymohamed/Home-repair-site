@@ -9,13 +9,13 @@
 // $
 
 // 000000fd
-$background-Color: #000000fd;
+$background-Color: #000000fa;
 //------
 $background: #131313;
 // content_background_color
 $content_background: #ffffff;
 // GOLD
-$color-gold:rgb(230, 177, 93);
+$color-gold:rgb(233, 178, 90);
 //
 $color-font: #959595;
 // WHITE
@@ -29,13 +29,16 @@ $list:#FFFFFF;
 // font__info
 $font_info:FuturaBookC;
 
-
+a {
+    outline: none;
+}
 
 //  MIXIN a 
 
 @mixin a() {
     text-decoration: none;
     text-transform: uppercase;
+    outline: none;
 }
 
 // MIXIN font
@@ -93,6 +96,7 @@ $height-project: 815px;
 
 @mixin boxClients {
     background-color: $color-gold;
+    border-radius: 1%;
     margin: 2px;
     width: 133px;
     height: 50px;

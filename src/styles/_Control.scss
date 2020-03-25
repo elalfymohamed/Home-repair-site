@@ -51,10 +51,11 @@
     }
 
     .control__svg {
-        background: url('./../img//svg/frame.svg');
+        background: url('./../img/svg/frame.svg');
         background-position: center;
         position: relative;
-        height: 559px;
+        top: 266px;
+        height: 289px;
         width: 100%;
         grid-column: 1/span 3;
         grid-row: 1;

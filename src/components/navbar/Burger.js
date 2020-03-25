@@ -1,7 +1,8 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
 
 import React, { useState, useEffect } from 'react';
+
+import PropTypes from 'prop-types';
+
 
 import '../../styles/App.scss';
 
@@ -66,6 +67,7 @@ const Burger = ({ open, setOpen }) => {
     const MODAL = 'open';
 
     const [condition, setCondition] = useState(false);
+
     useEffect(() => {
         document.body.classList.add(condition ? MODAL_OPEN : MODAL);
         return () => {
@@ -80,8 +82,7 @@ const Burger = ({ open, setOpen }) => {
             role="button"
             tabIndex="0"
             aria-label="Toggle menu"
-
-
+            onKeyPress={() => setCondition(!condition)}
         >
             <StyledBurger
                 aria-label="Toggle menu"
@@ -97,3 +98,8 @@ const Burger = ({ open, setOpen }) => {
 };
 
 export default Burger;
+
+Burger.propTypes = {
+    open: PropTypes.bool.isRequired,
+    setOpen: PropTypes.func.isRequired,
+};
