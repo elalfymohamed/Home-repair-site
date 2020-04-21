@@ -1,4 +1,4 @@
-@import './Menu';
+@import "./Menu";
 
 .OurClients {
     display: grid;
@@ -8,9 +8,17 @@
     background-color: $content_background;
     padding-bottom: 70px;
 
+    // ! Media Queries 480px
+
+    @include mobile-only {}
+
     .OurClients__Title {
-        grid-column: 2/span 3;
+        grid-column: 2 / span 3;
         grid-row: 1/1;
+
+        // ! Media Queries 480px
+
+        @include mobile-only {}
 
         .OurClients__title {
             text-align: center;
@@ -21,7 +29,7 @@
         }
 
         .OurClients__image {
-            background: no-repeat url('../img/svg/signboard-clients.svg');
+            background: no-repeat url("../img/svg/signboard-clients.svg");
             background-position: center;
             height: 35px;
         }
@@ -37,19 +45,29 @@
     .clients {
         grid-column: 2/2;
         grid-row: 2/2;
+
+        // ! Media Queries 480px
+
+        @include mobile-only {}
     }
 
     div:nth-child(2) {
         grid-column: 4/4;
         grid-row: 2/2;
+
+        // ! Media Queries 480px
+
+        @include mobile-only {}
     }
 
     div:nth-child(3) {
         grid-column: 3/3;
         grid-row: 2/2;
+
+        // ! Media Queries 480px
+
+        @include mobile-only {}
     }
-
-
 
     .show__clients {
         margin-left: 18px;
@@ -82,7 +100,6 @@
                     font-size: 18px;
                     line-height: 23px;
                     font-weight: bold;
-
                 }
             }
         }
@@ -116,13 +133,14 @@
             width: 110px;
 
             .icon__distance {
-                background: no-repeat url('../img/svg/client-svg-1.svg');
+                background: no-repeat url("../img/svg/client-svg-1.svg");
                 @include iconClients;
 
                 .distance {
                     @include fontClients;
                 }
             }
+
             &:hover {
                 box-shadow: 5px 5px 20px rgba(56, 45, 26, 0.644);
             }
@@ -131,21 +149,18 @@
         .box__days {
             @include boxClients;
 
-
             .icon__days {
-                background: no-repeat url('../img/svg/client-svg-2.svg');
+                background: no-repeat url("../img/svg/client-svg-2.svg");
                 @include iconClients;
 
                 .days {
                     @include fontClients;
-
                 }
             }
+
             &:hover {
                 box-shadow: 5px 5px 20px rgba(56, 45, 26, 0.644);
             }
         }
-
-        
     }
 }

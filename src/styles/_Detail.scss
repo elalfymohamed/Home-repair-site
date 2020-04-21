@@ -5,16 +5,33 @@
     grid-template-columns: 100px auto 100px;
     grid-template-rows: 250px 280px 150px auto 70px;
 
+    // ! Media Queries 480px  
+
+    @include mobile-only {}
+
+
     .detail__ {
         grid-column: 1/ span 3;
         grid-row: 1;
         padding-top: 50px;
         background-color: $content_background;
+
+        // ! Media Queries 480px  
+
+
+        @include mobile-only {}
+
     }
 
     .detail__svg {
         grid-column: 1/span 3;
         grid-row: 1;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
+
+
 
         .svg {
             background: url('../img/svg/Frame.svg');
@@ -33,6 +50,10 @@
         grid-column: 1 /span 3;
         grid-row: 2 /span 4;
 
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
+
         .detail__image {
             background-image: url('../img/home/substrate_image.jpg');
             height: 100%;
@@ -50,14 +71,35 @@
     .form__section {
         grid-column: 2/2;
         grid-row: 1/ span 2;
+        margin: auto;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {
+            // grid-column: none;
+            // grid-row: 1/ span 2;
+            // position: relative;
+            // top: 40px;
+            // left: 0;
+            // width: 320px;
+        }
 
         .container {
             text-align: center;
             justify-content: center;
             position: relative;
             top: 40px;
-            left: 170px;
+            left: 0px;
             width: 800px;
+
+            // ! Media Queries 480px  
+
+            @include mobile-only {
+                // position: relative;
+                // top: 40px;
+                // left: 0;
+                // width: 320px;
+            }
 
             .box {
                 background-color: $background;

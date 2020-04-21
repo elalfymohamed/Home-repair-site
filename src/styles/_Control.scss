@@ -5,10 +5,23 @@
     grid-template-columns: 18px auto 18px;
     grid-template-rows: 132px 60px auto auto 92px;
 
+    // ! Media Queries 480px  
+    @include mobile-only {
+        
+    }
+
     .control__Title {
         grid-column: 1/span 2;
         grid-row: 1;
         padding-top: 85px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+        }
+
+
+
 
         .control__title {
             font-size: 25px;
@@ -39,6 +52,14 @@
         padding-top: 50px;
         z-index: 10;
 
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+
+        }
+
+
+
         iframe {
             position: relative;
             top: 0;
@@ -46,21 +67,33 @@
             width: 50%;
             height: 434px;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+            // ! Media Queries 480px  
+            @include mobile-only {
+                
+            }
         }
 
     }
 
     .control__svg {
+        grid-column: 1/span 3;
+        grid-row: 1;
         background: url('./../img/svg/frame.svg');
         background-position: center;
         position: relative;
         top: 266px;
         height: 289px;
         width: 100%;
-        grid-column: 1/span 3;
-        grid-row: 1;
         z-index: 5;
         padding: 0;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+
+        }
+
     }
 
     .content__icon__line {
@@ -71,6 +104,12 @@
         background: no-repeat url('../img/svg/line.svg');
         background-position: center;
         height: 2px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+
+        }
     }
 
     .content__description {
@@ -83,6 +122,11 @@
         color: $color-black;
         margin: 0 auto;
         z-index: 10;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+        }
     }
 
     .substrate {
@@ -92,5 +136,11 @@
         top: 123px;
         background: $content_background;
         z-index: -10;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            
+
+        }
     }
 }

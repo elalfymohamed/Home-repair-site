@@ -45,7 +45,7 @@ export default function Button() {
 
     const scrollFunction = () => {
         const myButton = document.getElementById('btn');
-        if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
             myButton.style.display = 'block';
         } else {
             myButton.style.display = 'none';

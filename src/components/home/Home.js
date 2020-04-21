@@ -14,6 +14,8 @@ import Goal from '../listGoal/Goal';
 
 import '../../styles/App.scss';
 
+import '../../styles/Respons.scss';
+
 
 export default function Home() {
     return (

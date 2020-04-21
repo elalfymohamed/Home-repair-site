@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 
 import React from 'react';
 
@@ -22,7 +21,8 @@ export default function Slideshow() {
                 Projects
             </h2>
             <p className="completed__description">
-                Only a small part of the work performed by our company is presented on the site. For 14 years on in the
+                Only a small part of the work performed by our company
+                is presented on the site. For 14 years on in the
                 construction market we have made happy more than 1000 families
             </p>
             <div className="completed__slide__container">
@@ -50,7 +50,7 @@ export default function Slideshow() {
                     <p>Upon request</p>
                 </li>
             </ul>
-            <div className="completed__box-links">
+            <div className="completed__box-links" id="box">
                 <ul>
                     <li>
                         <Link to="/">Rostov-on-Don, Admiral</Link>

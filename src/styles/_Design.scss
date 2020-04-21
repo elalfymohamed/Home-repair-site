@@ -1,6 +1,6 @@
 @import './Menu';
 
-.design{
+.design {
     display: grid;
     grid-template-columns: 70px auto auto auto 70px;
     grid-template-rows: 185px auto;
@@ -8,10 +8,16 @@
     padding-top: 120px;
     height: 600px;
 
+
+    // ! Media Queries 480px  
+    @include mobile-only {}
+
     .design__Title {
         grid-column: 2/span 3;
         grid-row: 1;
 
+        // ! Media Queries 480px  
+        @include mobile-only {}
 
         .design__title {
             text-align: center;
@@ -44,6 +50,9 @@
         grid-column: 2/2;
         grid-row: 2;
         height: $height-project;
+
+        // ! Media Queries 480px  
+        @include mobile-only {}
 
         .mini_image {
 
@@ -108,6 +117,9 @@
         grid-row: 2;
         height: $height-project;
 
+        // ! Media Queries 480px  
+        @include mobile-only {}
+
         .standard__image {
 
             .project__img {
@@ -146,6 +158,9 @@
         grid-column: 4/4;
         grid-row: 2;
         height: $height-project;
+
+        // ! Media Queries 480px  
+        @include mobile-only {}
 
         .Full__image {
 

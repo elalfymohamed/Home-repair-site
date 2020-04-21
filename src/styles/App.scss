@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -25,4 +25,9 @@ body {
 // Open Burger Class Nav__Active
 body.nav__active {
     overflow: hidden;
+}
+
+a,
+button {
+    outline: none;
 }

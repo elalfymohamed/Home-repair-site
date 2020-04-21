@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 
 export default function Inner({
-    title, __title, br, em, paragraph, __paragraph, img,
+    title, __title, br, em, paragraph, __paragraph,
 }) {
     return (
         <>
-            <div className={img} role="img" />
+
+
             <h2 className={__title}>
                 {' '}
                 {title}
@@ -35,6 +36,6 @@ Inner.propTypes = {
     em: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
     __paragraph: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
+
 
 };

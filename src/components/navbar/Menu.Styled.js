@@ -7,16 +7,13 @@ import icon from '../../img/icon/ICON-DESIGN.svg';
 
 export const StyledMenu = styled.nav`
 display: grid;
-grid-template-columns: auto 580px;
-
-/* grid-template-columns: auto 800px; */
-
+grid-template-columns: auto minmax(0px, 850px);
 grid-template-rows: 50px auto 90px;
 flex-direction: column;
 justify-content: center;
 background: #000000;
 transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-height:101%;
+height:100%;
 width: 100%;
 padding: 0;
 position: absolute;
@@ -30,7 +27,6 @@ z-index: 10;
 a {
 font-size: 1rem;
 text-transform: uppercase;
-/* font-weight: bold; */
 letter-spacing: 0.5rem;
 color: #EFFFFA;
 text-decoration: none;
@@ -50,7 +46,6 @@ padding: 6px 0 0;
 
 div{
 background:url(${icon});
-/* background-position: center; */
 background-repeat: no-repeat;
 height: 50px;
 position:inherit;
@@ -71,12 +66,11 @@ text-align: center;
 -webkit-box-align:center;
 list-style:none;
 padding: 0;
-position: absolute;
-right: 12%;
+
 
 a{
 padding: 1rem 0;
-font-size: 1.5rem;
+font-size: 1.8rem;
 
 }
 }

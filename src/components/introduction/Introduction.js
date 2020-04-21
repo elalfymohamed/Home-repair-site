@@ -35,9 +35,9 @@ export default function Introduction() {
     return (
         <>
             <section className="introduction">
+                <div className="introduction__img" role="img" />
                 <div className="introduction__inner">
                     <Inner
-                        img="introduction__img"
                         __title="introduction__title"
                         title="Turnkey Repair In The"
                         br="City Of"
@@ -48,14 +48,16 @@ export default function Introduction() {
                         20% from
                         cost of materials due to the organization of work"
                     />
-                    <Link to="/" target="_blank" style={btnCalculate} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-calculate">
-                        CALCULATE THE COST
-                    </Link>
-                    <Link to="/" target="_blank" style={btnApplication} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-application">
-                        <span>SUBMIT YOUR</span>
-                        {' '}
+                    <div className="Link">
+                        <Link to="/" target="_blank" style={btnCalculate} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-calculate">
+                            CALCULATE THE COST
+                        </Link>
+                        <Link to="/" target="_blank" style={btnApplication} type="button" tabIndex="0" rel="noopener noreferrer" className="btn btn-application">
+                            <span>SUBMIT YOUR</span>
+                            {' '}
                     APPLICATION
-                    </Link>
+                        </Link>
+                    </div>
                 </div>
                 <div className="introduction__box-instagram">
                     <span className="inst__box">
@@ -64,7 +66,7 @@ export default function Introduction() {
                     </span>
                 </div>
                 <div className="introduction__box-scroll-down">
-                    <button type="button" onClick={() => scroll.scrollMore(900, { delay: 0 })}>
+                    <button className="btn" type="button" onClick={() => scroll.scrollMore(900, { delay: 0 })} title="Go to down">
                         <p>Scroll down</p>
                         <img src={down} alt="btn-down" />
                     </button>

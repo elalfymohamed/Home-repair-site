@@ -1,34 +1,33 @@
 @import './Menu';
 
+// Chief // introduction 
 .introduction {
     display: grid;
-    grid-template-columns: 70px 165px minmax(auto, auto);
-    grid-template-rows: minmax(auto, 730px) 48px 85px;
+    grid-template-columns: 70px minmax(auto, auto);
+    grid-template-rows: 200px minmax(auto, 730px) 70px;
+    height: 863px;
+
+
+    .introduction__img {
+        background-image: url('./../img/home/bg-001.jpg');
+        height: 862px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        grid-column: 2 /span 2;
+        grid-row: 1 /span 3;
+        opacity: 0.4;
+    }
 
     .introduction__inner {
-        grid-column: 2/span 2;
-        grid-row: 1/span 2;
-        display: grid;
-        grid-template-columns: 60px 228px 228px auto;
-        grid-template-rows: 193px 122px 133px auto;
-
-
-        .introduction__img {
-            background-image: url('./../img/home/bg-001.jpg');
-            height: 862px;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            grid-column: 1 /span 4;
-            grid-row: 1 /span 5;
-            opacity: 0.4;
-        }
+        grid-column: 2/span 1;
+        grid-row: 2/span 1;
+        margin-left: 90px;
+        z-index: 1;
 
         .introduction__title {
-            grid-column: 2/span 3;
-            grid-row: 2/ span 1;
             text-transform: uppercase;
             letter-spacing: 0.05px;
             color: $color-white;
@@ -38,15 +37,12 @@
             z-index: 1;
             font-family: 'Cabin Condensed', sans-serif;
 
-
             em {
                 color: $color-gold;
             }
         }
 
         .introduction__description {
-            grid-column: 2/ span 3;
-            grid-row: 3/ span 1;
             color: $color-white;
             z-index: 1;
             font-size: 25px;
@@ -55,48 +51,47 @@
             margin-top: 30px;
         }
 
-        .btn-calculate {
-            grid-column: 2;
-            grid-row: 4/span 2;
-            margin-top: 40px;
-            z-index: 1;
-            @include a();
-            color: $color-white;
-            justify-items: center;
-            align-items: center;
-            -webkit-box-align: center;
-
-
-        }
-
-        .btn {
-            height: 51px;
-            width: 207px;
-            max-width: 340px;
-            border-radius: 2px;
-            font-size: 13px;
-            display: grid;
-            line-height: 15px;
-            justify-items: center;
-            align-items: center;
-            -webkit-box-align: center;
-        }
-
-
-        .btn-application {
-            @include a();
-            grid-column: 3;
-            grid-row: 4/span 2;
+        .Link {
             display: flex;
-            margin-top: 40px;
-            z-index: 1;
-            color: $color-white;
-            justify-content: center;
-            -webkit-box-pack: center;
 
-            span {
-                margin-right: 5px;
-                width: auto;
+            .btn-calculate {
+                margin-top: 40px;
+                z-index: 1;
+                display: grid;
+                @include a();
+                color: $color-white;
+                justify-items: center;
+                align-items: center;
+                -webkit-box-align: center;
+                margin-right: 20px;
+            }
+
+            .btn {
+                height: 51px;
+                width: 207px;
+                max-width: 340px;
+                border-radius: 2px;
+                font-size: 13px;
+                line-height: 15px;
+                justify-items: center;
+                align-items: center;
+                -webkit-box-align: center;
+            }
+
+
+            .btn-application {
+                @include a();
+                display: flex;
+                margin-top: 40px;
+                z-index: 1;
+                color: $color-white;
+                justify-content: center;
+                -webkit-box-pack: center;
+
+                span {
+                    margin-right: 5px;
+                    width: auto;
+                }
             }
         }
     }
@@ -124,16 +119,14 @@
                 margin-top: 50px;
                 width: 70px;
             }
-
         }
     }
 
     .introduction__box-scroll-down {
-        display: grid;
-        grid-column: 2/span 2;
-        grid-row: 3/span 2;
+        grid-column: 2/span 1;
+        grid-row: 3/span 3;
         position: relative;
-        top: 16%;
+        top: 0%;
         background-color: $background-Color;
         width: 184px;
         height: 70px;
@@ -163,5 +156,4 @@
             }
         }
     }
-    
 }

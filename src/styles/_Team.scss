@@ -6,9 +6,19 @@
     grid-template-rows: 200px auto auto;
     padding-top: 70px;
 
+    // ! Media Queries 480px  
+
+
+    @include mobile-only {}
+
     .team__Title {
         grid-column: 2/span 3;
         grid-row: 1/1;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
+
 
         .team__title {
             color: $color-white;
@@ -39,16 +49,28 @@
         grid-column: 2/2;
         grid-row: 2/2;
         margin-left: 25px;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
     }
 
     div:nth-child(2) {
         grid-column: 4/4;
         grid-row: 2/2;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
     }
 
     div:nth-child(3) {
         grid-column: 3/3;
         grid-row: 2/2;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
     }
 
     .the__team {
@@ -136,6 +158,10 @@
         grid-column: 2/ 5;
         grid-row: 3/ 3;
 
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
+
         .line {
             background: no-repeat url('../img/svg/line.svg');
             background-position: center;
@@ -158,5 +184,9 @@
         position: relative;
         top: 270px;
         z-index: -10;
+
+        // ! Media Queries 480px  
+
+        @include mobile-only {}
     }
 }

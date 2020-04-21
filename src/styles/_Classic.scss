@@ -2,22 +2,38 @@
 
 .classic {
     display: grid;
-    grid-template-columns: 70px 400px auto 70px;
-    grid-template-rows: auto;
+    grid-template-columns: 70px 400px auto auto 70px;
+    grid-template-rows: 210px 265px auto;
+
+    // ! Media Queries 480px  
+    @include mobile-only {
+        
+    }
 
     .classic__image {
-        grid-column: 1/ span 4;
-        grid-row: 1;
+        grid-column: 1/ span 5;
+        grid-row: 1/ span 3;
         background: no-repeat url('../img/realize/realize-bg.jpg');
         background-size: cover;
         height: 790px;
         width: 100%;
         opacity: 0.2;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+          
+        }
+
     }
 
     .menu__classic {
         grid-column: 2;
         grid-row: 1;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+           
+        }
 
         .menu__classic__ul {
             display: block;
@@ -61,7 +77,7 @@
                     line-height: 34px;
                     padding-left: 10px;
 
-                    .menu__li{
+                    .menu__li {
                         margin-bottom: 10px;
                     }
                 }
@@ -70,61 +86,93 @@
         }
     }
 
-    .classic__img {
-        grid-column: 3;
-        grid-row: 1;
 
-        .classic__img__top {
-            float: right;
 
-            .classic__img__right {
-                position: relative;
-                bottom: 70px;
-                left: 0;
-            }
+    .classic__top {
+        grid-column: 4/4;
+        grid-row: 1/1;
+        z-index: 10;
+        padding-left: 10px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            display: none;
         }
 
-        .classic__img__right {
-            float: right;
+        .classic__img_realize {
+            position: relative;
+            bottom: 75px;
+            left: 0;
 
-            .classic__img__bottom {
-                position: relative;
-                top: 270px;
-                left: 360px;
-
-                img {
-                    width: 355px;
-                    height: 460px;
-                }
-            }
-        }
-
-        .classic__img__left_ {
-            display: flex;
-
-            .classic__img__top_ {
-
-                position: relative;
-                bottom: 45px;
-
-                img {
-                    width: 374px;
-                    height: 495px;
-                }
-            }
-        }
-
-        .classic__img__left {
-
-            .classic__img__bottom_ {
-                position: absolute;
-
-                img {
-                    height: 345px;
-                    width: 372px;
-                }
+            .realize {
+                width: 390px;
+                height: 300px;
             }
         }
     }
 
+    .classic__right {
+        grid-column: 3/3;
+        grid-row: 1/span 2;
+        z-index: 10;
+        padding-right: 10px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            display: none;
+        }
+
+        .classic__img_conner {
+            position: relative;
+            bottom: 30px;
+
+            img {
+                width: 390px;
+                height: 460px;
+            }
+        }
+    }
+
+    .classic__left {
+        grid-column: 4/4;
+        grid-row: 2/span 2;
+        z-index: 10;
+        padding-left: 10px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            display: none;
+        }
+
+        .classic__img_arapaima {
+            position: relative;
+            top: 75px;
+
+            .arapaima {
+                width: 390px;
+                height: 460px;
+            }
+        }
+    }
+
+    .classic__top_ {
+        grid-column: 3/3;
+        grid-row: 3/3;
+        z-index: 10;
+        padding-right: 10px;
+
+        // ! Media Queries 480px  
+        @include mobile-only {
+            display: none;
+        }
+
+        .classic__img_realize2 {
+            position: absolute;
+
+            .realize2 {
+                width: 390px;
+                height: 370px;
+            }
+        }
+    }
 }

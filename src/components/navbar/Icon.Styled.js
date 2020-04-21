@@ -14,6 +14,11 @@ grid-column: 2;
 grid-row: 3/3;
 `;
 
+export const Svg = Styled.div`
+position: relative;
+right: 13px;
+`;
+
 export const ListContact = Styled.ul`
 display: flex;
 list-style: none;
