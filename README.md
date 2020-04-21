@@ -1,17 +1,19 @@
 # React-webpack
 
-## Available Scripts
+In the project directory, you can run
 
-In the project directory, you can run:
+# Usage
 
-### `npm start`
+Install dependencies
+
+```
+npm install
+```
+
+Run dev server - http://localhost:3000
+
+```
+npm npm start
+```
 
 Runs the app in the development mode.<br />
-
-### `sudo i npm`
-
-## Use in the project
-
-* Webpack
-* .babelrc
-* .eslintrc
