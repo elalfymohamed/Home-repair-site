@@ -1,4 +1,4 @@
-@import './Menu';
+@import "./Menu";
 
 .Team {
     display: grid;
@@ -6,19 +6,9 @@
     grid-template-rows: 200px auto auto;
     padding-top: 70px;
 
-    // ! Media Queries 480px  
-
-
-    @include mobile-only {}
-
     .team__Title {
-        grid-column: 2/span 3;
+        grid-column: 2 / span 3;
         grid-row: 1/1;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
 
         .team__title {
             color: $color-white;
@@ -30,7 +20,7 @@
         }
 
         .team__image {
-            background: no-repeat url('../img/svg/signboard-team.svg');
+            background: no-repeat url("../img/svg/signboard-team.svg");
             background-position: center;
             height: 35px;
         }
@@ -41,36 +31,24 @@
             line-height: 27px;
             text-align: center;
             font-family: $font_info;
-
         }
     }
 
     .show__team {
         grid-column: 2/2;
         grid-row: 2/2;
-        margin-left: 25px;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
+        // margin-left: 25px;
+        text-align: center;
     }
 
     div:nth-child(2) {
         grid-column: 4/4;
         grid-row: 2/2;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
     }
 
     div:nth-child(3) {
         grid-column: 3/3;
         grid-row: 2/2;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
     }
 
     .the__team {
@@ -83,7 +61,13 @@
             box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
             position: relative;
             top: 35px;
-            right: 25px;
+            right: 0;
+            text-align: justify;
+
+            @include mobile-only {
+                position: relative;
+                left: 105px;
+            }
 
             .icon__image {
                 height: 50px;
@@ -91,7 +75,6 @@
                 top: 5px;
                 left: 5px;
             }
-
         }
 
         .image__team {
@@ -104,7 +87,13 @@
         .team__info {
             position: relative;
             bottom: 60px;
-            left: 45px;
+            left: 70px;
+            max-width: 246px;
+
+            @include mobile-only {
+                position: relative;
+                left: 170px;
+            }
 
             .team__details {
                 background: $list;
@@ -128,7 +117,6 @@
                     line-height: 26px;
                     text-align: center;
                     margin: 0;
-
                 }
             }
         }
@@ -158,12 +146,8 @@
         grid-column: 2/ 5;
         grid-row: 3/ 3;
 
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
         .line {
-            background: no-repeat url('../img/svg/line.svg');
+            background: no-repeat url("../img/svg/line.svg");
             background-position: center;
             height: 2px;
         }
@@ -173,20 +157,15 @@
             font-size: 20px;
             line-height: 34px;
             font-family: $font_info;
-
         }
     }
 
     .substrate {
-        grid-column: 1/ span 5;
+        grid-column: 1 / span 5;
         grid-row: 2/ 3;
         background: $content_background;
         position: relative;
         top: 270px;
         z-index: -10;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
     }
 }

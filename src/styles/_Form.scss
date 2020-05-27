@@ -7,21 +7,11 @@
     background: $content_background;
     height: 850px;
 
-    // ! Media Queries 480px  
-
-    @include mobile-only {}
-
 
     .free__old {
         grid-column: 2;
         grid-row: 1/span 2;
 
-        // ! Media Queries 480px  
-
-        @include mobile-only {
-            display: none;
-
-        }
 
         .free__img {
             background: url('../img/home/presentation.png') no-repeat;
@@ -96,9 +86,6 @@
         grid-column: 3;
         grid-row: 1/2;
 
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
 
         .form__col {
             background: $background-Color;
@@ -108,13 +95,6 @@
             left: 30px;
             top: 90px;
             border-radius: 1%;
-
-            @include mobile-only {
-                position: relative;
-                top: 40px;
-                left: 0;
-                width: 320px;
-            }
 
             .title__form {
                 text-align: center;
@@ -314,9 +294,7 @@
         grid-column: 3;
         grid-row: 2/2;
 
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
+        
 
         .save__p {
             display: flex;

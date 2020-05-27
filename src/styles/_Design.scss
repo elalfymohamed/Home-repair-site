@@ -1,4 +1,4 @@
-@import './Menu';
+@import "./Menu";
 
 .design {
     display: grid;
@@ -8,16 +8,9 @@
     padding-top: 120px;
     height: 600px;
 
-
-    // ! Media Queries 480px  
-    @include mobile-only {}
-
     .design__Title {
-        grid-column: 2/span 3;
+        grid-column: 2 / span 3;
         grid-row: 1;
-
-        // ! Media Queries 480px  
-        @include mobile-only {}
 
         .design__title {
             text-align: center;
@@ -29,7 +22,7 @@
         }
 
         .design__image {
-            background: url('../img/svg/signboard-design.svg') no-repeat;
+            background: url("../img/svg/signboard-design.svg") no-repeat;
             background-position: center;
             height: 35px;
             margin-top: 5px;
@@ -51,11 +44,7 @@
         grid-row: 2;
         height: $height-project;
 
-        // ! Media Queries 480px  
-        @include mobile-only {}
-
         .mini_image {
-
             .project__img {
                 @include image;
             }
@@ -65,6 +54,10 @@
             width: 80%;
             height: 27%;
             @include list;
+
+            @include mobile-only {
+                width: 340px;
+            }
 
             &:hover {
                 box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
@@ -97,7 +90,6 @@
 
         &:hover {
             box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.466);
-
         }
 
         .project__link {
@@ -109,7 +101,6 @@
         }
     }
 
-
     // STANDARD -------------------
 
     .project__Standard {
@@ -117,12 +108,11 @@
         grid-row: 2;
         height: $height-project;
 
-        // ! Media Queries 480px  
-        @include mobile-only {}
-
         .standard__image {
-
             .project__img {
+                position: relative;
+                top: 0;
+                left: 0;
                 @include image;
             }
         }
@@ -132,9 +122,12 @@
             height: 38%;
             @include list;
 
+            @include mobile-only {
+                width: 340px;
+            }
+
             &:hover {
                 box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
-
             }
 
             .standard__title {
@@ -147,7 +140,6 @@
                 .standard__list__li {
                     @include li;
                 }
-
             }
         }
     }
@@ -159,11 +151,7 @@
         grid-row: 2;
         height: $height-project;
 
-        // ! Media Queries 480px  
-        @include mobile-only {}
-
         .Full__image {
-
             .project__img {
                 @include image;
             }
@@ -173,10 +161,11 @@
             width: 80%;
             height: 55%;
             @include list;
-
+            @include mobile-only {
+                width: 340px;
+            }
             &:hover {
                 box-shadow: 20px 20px 50px rgba(48, 48, 48, 0.322);
-
             }
 
             .Full__title {
@@ -189,7 +178,6 @@
                 .Full__list__li {
                     @include li;
                 }
-
             }
         }
     }

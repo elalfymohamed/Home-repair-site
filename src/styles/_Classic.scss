@@ -1,39 +1,28 @@
-@import './Menu';
+@import "./Menu";
 
 .classic {
     display: grid;
     grid-template-columns: 70px 400px auto auto 70px;
     grid-template-rows: 210px 265px auto;
 
-    // ! Media Queries 480px  
     @include mobile-only {
-        
+        grid-template-columns: 70px 525px auto auto 70px;
     }
 
+
     .classic__image {
-        grid-column: 1/ span 5;
-        grid-row: 1/ span 3;
-        background: no-repeat url('../img/realize/realize-bg.jpg');
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 3;
+        background: no-repeat url("../img/realize/realize-bg.jpg");
         background-size: cover;
         height: 790px;
         width: 100%;
         opacity: 0.2;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-          
-        }
-
     }
 
     .menu__classic {
         grid-column: 2;
         grid-row: 1;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-           
-        }
 
         .menu__classic__ul {
             display: block;
@@ -47,7 +36,7 @@
                 text-transform: uppercase;
                 font-weight: 400;
                 line-height: 37px;
-                font-family: 'Vidaloka', serif;
+                font-family: "Vidaloka", serif;
             }
 
             .menu__classic__div {
@@ -61,7 +50,7 @@
                     color: $color-gold;
 
                     &::after {
-                        content: '';
+                        content: "";
                         display: block;
                         background: $color-gold;
                         width: 120px;
@@ -81,23 +70,15 @@
                         margin-bottom: 10px;
                     }
                 }
-
             }
         }
     }
-
-
 
     .classic__top {
         grid-column: 4/4;
         grid-row: 1/1;
         z-index: 10;
         padding-left: 10px;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-            display: none;
-        }
 
         .classic__img_realize {
             position: relative;
@@ -113,14 +94,9 @@
 
     .classic__right {
         grid-column: 3/3;
-        grid-row: 1/span 2;
+        grid-row: 1 / span 2;
         z-index: 10;
         padding-right: 10px;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-            display: none;
-        }
 
         .classic__img_conner {
             position: relative;
@@ -135,14 +111,9 @@
 
     .classic__left {
         grid-column: 4/4;
-        grid-row: 2/span 2;
+        grid-row: 2 / span 2;
         z-index: 10;
         padding-left: 10px;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-            display: none;
-        }
 
         .classic__img_arapaima {
             position: relative;
@@ -160,11 +131,6 @@
         grid-row: 3/3;
         z-index: 10;
         padding-right: 10px;
-
-        // ! Media Queries 480px  
-        @include mobile-only {
-            display: none;
-        }
 
         .classic__img_realize2 {
             position: absolute;

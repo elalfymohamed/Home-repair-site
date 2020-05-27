@@ -1,4 +1,4 @@
-@import './Menu';
+@import "./Menu";
 
 .repair {
     display: grid;
@@ -7,24 +7,16 @@
     background: $content_background;
     padding-top: 45px;
 
-    // ! Media Queries 480px  
-
-    @include mobile-only {}
-
     .repair__Title {
-        grid-column: 2/ span 3;
+        grid-column: 2 / span 3;
         grid-row: 1/1;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
 
         .repair__title {
             font-size: 25px;
             line-height: 28px;
             color: $color-black;
             padding-top: 20px;
-            letter-spacing: .2px;
+            letter-spacing: 0.2px;
             text-transform: uppercase;
             text-align: center;
             z-index: 10;
@@ -49,32 +41,18 @@
         grid-column: 2/2;
         grid-row: 3;
         height: 44rem;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
     }
 
     .repair__rectangle_ {
         grid-column: 3/3;
         grid-row: 3;
         height: 44rem;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
     }
 
     .repair__rectangle__ {
         grid-column: 4/4;
         grid-row: 3;
         height: 44rem;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
     }
 
     .rectangle__img {
@@ -106,7 +84,7 @@
         .rectangle__title {
             font-size: 20px;
             line-height: 25px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
             color: $color-black;
             padding-left: 41px;
             padding-top: 7px;
@@ -148,5 +126,4 @@
             box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.384);
         }
     }
-
 }

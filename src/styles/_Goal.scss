@@ -1,5 +1,4 @@
-@import './Menu';
-
+@import "./Menu";
 
 .goal {
     display: grid;
@@ -7,18 +6,9 @@
     grid-template-rows: 155px auto;
     padding-top: 540px;
 
-    // ! Media Queries 480px  
-
-    @include mobile-only {}
-
-
     .goal__info {
         grid-column: 2/2;
         grid-row: 1/1;
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
 
         .Goal__Title {
             color: $color-white;
@@ -44,7 +34,7 @@
                 left: 190px;
 
                 &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     height: 0.5em;
                     width: 25%;
@@ -57,25 +47,25 @@
     .slider__room__info {
         grid-column: 3/3;
         grid-row: 1/1;
-
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {
-            display: none;
-
-        }
-
+       
 
         .slider__room {
             display: flex;
-
+            @include mobile-only {
+                position: relative;
+                top: 0;
+                left: 200px;
+                max-width: 800px;
+            }
 
             .room-info {
                 margin-left: 12px;
                 opacity: 0.2;
                 transition: 3s ease;
+                @include mobile-only {
+                    margin-left: 30px;
 
+                }
 
                 .slider__number {
                     color: $color-gold;
@@ -85,7 +75,7 @@
                     @include font;
 
                     &::after {
-                        content: '';
+                        content: "";
                         display: block;
                         height: 0.5em;
                         width: 15%;
@@ -115,18 +105,11 @@
         grid-column: 3/3;
         grid-row: 2/2;
 
-
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
-
         .image {
             opacity: 0;
-            transition: .3s ease;
+            transition: 0.3s ease;
 
             .slider__img {
-
                 .img {
                     position: relative;
                     top: 0;
@@ -134,13 +117,19 @@
                     width: 100%;
                     height: 460px;
                     object-fit: cover;
+
+                    @include mobile-only {
+                        margin-left: 30px;
+                        height: 580px;
+                    }
+
                 }
             }
         }
 
         .image.active {
             opacity: 1;
-            transition-duration: .2s;
+            transition-duration: 0.2s;
         }
     }
 
@@ -148,17 +137,12 @@
         grid-column: 2/2;
         grid-row: 2/2;
 
-        // ! Media Queries 480px  
-
-        @include mobile-only {}
-
         .slider__info {
             margin-right: 60px;
 
             .info {
                 opacity: 0;
                 transition: 3s ease;
-
 
                 .slider__info_ {
                     padding-top: 30px;

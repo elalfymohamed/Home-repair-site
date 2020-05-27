@@ -8,17 +8,9 @@
     background-color: $content_background;
     padding-bottom: 70px;
 
-    // ! Media Queries 480px
-
-    @include mobile-only {}
-
     .OurClients__Title {
         grid-column: 2 / span 3;
         grid-row: 1/1;
-
-        // ! Media Queries 480px
-
-        @include mobile-only {}
 
         .OurClients__title {
             text-align: center;
@@ -45,28 +37,16 @@
     .clients {
         grid-column: 2/2;
         grid-row: 2/2;
-
-        // ! Media Queries 480px
-
-        @include mobile-only {}
     }
 
     div:nth-child(2) {
         grid-column: 4/4;
         grid-row: 2/2;
-
-        // ! Media Queries 480px
-
-        @include mobile-only {}
     }
 
     div:nth-child(3) {
         grid-column: 3/3;
         grid-row: 2/2;
-
-        // ! Media Queries 480px
-
-        @include mobile-only {}
     }
 
     .show__clients {
@@ -76,6 +56,7 @@
         box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
         padding: 10px;
         height: 450px;
+        width: 400px;
 
         .img__clients {
             padding: 5px;
@@ -105,7 +86,7 @@
         }
 
         .detailing__clients {
-            width: 98%;
+            width: 350px;
 
             .detailing {
                 font-size: 12px;
