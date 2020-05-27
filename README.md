@@ -2,12 +2,10 @@
 
 In the project directory, you can run
 
-<<<<<<< HEAD
 # Usage
 
 Install dependencies
 
-=======
 
 # Usage
 
@@ -22,9 +20,6 @@ Run dev server - http://localhost:3000
 ```
 npm npm start
 ```
-
-
-Runs the app in the development mode.<br />
 
 
 Runs the app in the development mode.<br />
